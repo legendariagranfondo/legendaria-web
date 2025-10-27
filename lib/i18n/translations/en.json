@@ -1,0 +1,814 @@
+{
+  "navigation": {
+    "home": "Home",
+    "programs": "Programs",
+    "experiences": "Experiences",
+    "academy": "Academy",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Train Different.",
+    "subtitle": "Compete Better.",
+    "description": "Premium padel academy in Valencia with professional trainers and high-performance methodology.",
+    "cta": "Book Class",
+    "ctaSecondary": "Discover Our Methodology",
+    "ariaLabel": "Book padel class at JA Padel Academy Valencia"
+  },
+  "programs": {
+    "title": "Our Programs",
+    "description": "Exclusive methodology for all levels",
+    "cta": "View Programs"
+  },
+  "experiences": {
+    "title": "Premium Experiences",
+    "description": "Experience padel in a unique way",
+    "cta": "Discover Experiences"
+  },
+  "academy": {
+    "title": "Our Academy",
+    "description": "Discover our history and methodology",
+    "cta": "Learn About Academy"
+  },
+  "jaPadelWeek": {
+    "title": "JA PADEL",
+    "subtitle": "WEEK",
+    "description": "Live the ultimate padel experience"
+  },
+  "academyHeritage": {
+    "title1": "Where",
+    "title2": "every failure",
+    "title3": "brings you closer to",
+    "title4": "SUCCESS",
+    "subtitle": "FAIL AGAIN. FAIL BETTER.",
+    "description": "We transform every error into a growth opportunity. Our unique methodology converts frustration into constant evolution, and every training session into a step towards your best version."
+  },
+  "programsShowcase": {
+    "title": "OUR",
+    "subtitle": "PROGRAMS",
+    "description": "Modalities adapted to your level and objectives. From individual classes to personalized packages for unique experiences"
+  },
+  "origenPadel": {
+    "badge": "OUR HOME",
+    "title": "ORIGEN PADEL",
+    "subtitle": "CLUB",
+    "description": "Located in Paterna, Origen Padel Club is the home of JA Padel Academy. Our state-of-the-art facilities on Carrer Ciutat d'Ontinyent offer the perfect environment for you to develop your maximum potential in padel.",
+    "cta": "KNOW THE CLUB"
+  },
+  "testimonials": {
+    "title": "TESTIMONIALS",
+    "subtitle": "What our students say",
+    "list": [
+      {
+        "text": "JA Padel Academy has completely transformed my game. The exclusive methodology and professional environment have helped me evolve both technically and mentally. It's incredible how they've managed to create a space where every mistake becomes learning."
+      },
+      {
+        "text": "I've been training at the academy for two years and the evolution has been spectacular. I started from scratch and now I can compete with confidence. The step-by-step methodology and team of trainers make every class a unique experience."
+      },
+      {
+        "text": "A first-class academy. If you're looking to improve your padel with a proven methodology, you'll find it here. The atmosphere is incredible, the trainers are exceptional and I always leave class having learned something new and having a great time."
+      },
+      {
+        "text": "An exceptional training experience! One of the best academies I've known. The trainers have a clear vision of your game and know exactly what to work on. The methodology is so effective that results are noticeable from the first session."
+      },
+      {
+        "text": "The best padel academy in Valencia. I'm delighted with the methodology and team of trainers. The combination of technique, tactics and mental development is perfect. The professional environment and personalized attention make every class an investment in your game."
+      },
+      {
+        "text": "The personalized treatment and academy methodology are spectacular. Professionally they have exceptional quality to identify and improve the technical aspects of each player. The dynamics are varied and always demand the best from yourself."
+      }
+    ]
+  },
+  "methodology": {
+    "subtitle": "FAIL AGAIN. FAIL BETTER.",
+    "title": "EXCLUSIVE METHODOLOGY",
+    "description": "We transform every error into a growth opportunity. Our unique methodology combines advanced technique, winning mindset, and personalized training to take you from failure to success. Every session is a step closer to your maximum potential."
+  },
+  "ctaPremium": {
+    "title1": "TRAIN",
+    "title2": "DIFFERENT",
+    "description": "Live the premium padel experience in Valencia. Exclusive methodology and a community that transcends sport.",
+    "callButton": "CALL NOW",
+    "whatsappButton": "CHAT ON WHATSAPP"
+  },
+  "footer": {
+    "description": "JA Padel Academy - Premium padel academy in Valencia. Fail Again. Fail Better.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "programs": "Programs",
+    "copyright": "© 2025 JA PADEL ACADEMY. ALL RIGHTS RESERVED.",
+    "privacy": "PRIVACY",
+    "cookies": "COOKIES"
+  },
+  "programs": {
+    "individual": {
+      "title": "Individual Classes",
+      "subtitle": "Individual transformation",
+      "description": "Accelerate your evolution with 1:1 training. Instant technical correction and personalized improvement plan for every shot.",
+      "level": "All levels",
+      "features": [
+        "Instant technical correction",
+        "Flexible schedules",
+        "Accelerated progress"
+      ],
+      "cta": "BOOK CLASS"
+    },
+    "group": {
+      "title": "Group Classes",
+      "subtitle": "Collective evolution",
+      "description": "Master pair tactics in small groups. Learn to read the game and develop winning strategies.",
+      "level": "All levels",
+      "features": [
+        "Technique and tactics",
+        "Group play",
+        "Social environment"
+      ],
+      "cta": "VIEW SCHEDULES"
+    },
+    "premium": {
+      "title": "Personalized Packages",
+      "subtitle": "Memorable experiences",
+      "description": "Create unique moments: special gifts, visits to Valencia or premium experiences. We design your ideal experience.",
+      "level": "Personalized",
+      "features": [
+        "Custom experience design",
+        "Special gifts",
+        "Valencia visits"
+      ],
+      "cta": "DESIGN EXPERIENCE"
+    }
+  },
+  "programsPage": {
+    "title1": "PROGRAMS",
+    "title2": "OF PADEL",
+    "description": "From your first shot to professional competition. Find the perfect program for your level and objectives in Valencia.",
+    "hero": {
+      "subtitle": "From your first shot to professional competition. Find the perfect program for your level and objectives in Valencia.",
+      "cta1": "BOOK CLASS",
+      "cta2": "CHAT ON WHATSAPP"
+    },
+    "whyChoose": {
+      "title1": "WHY CHOOSE",
+      "title2": "JA PADEL ACADEMY?",
+      "description": "Our exclusive methodology and experience make us the reference padel academy in Valencia."
+    },
+    "benefits": [
+      {
+        "title": "Small Groups",
+        "description": "Maximum 4 people per group for personalized attention and accelerated progress"
+      },
+      {
+        "title": "Exclusive Methodology",
+        "description": "Teaching system developed by professionals with more than 40 years of experience"
+      },
+      {
+        "title": "Clear Objectives",
+        "description": "Each program has specific and measurable goals for your progress"
+      },
+      {
+        "title": "Certified Trainers",
+        "description": "Certified professionals with experience in competition and teaching"
+      }
+    ],
+    "help": {
+      "title": "Need help choosing your program?",
+      "description": "Our experts will help you find the perfect program for your level and objectives"
+    },
+    "programs": [
+      {
+        "title": "Individual Classes",
+        "subtitle": "Individual transformation",
+        "description": "Accelerate your evolution with 1:1 training. Instant technical correction and personalized improvement plan for every shot.",
+        "level": "All levels",
+        "groupSize": "1-2 people",
+        "features": [
+          "Instant technical correction",
+          "Flexible schedules",
+          "Accelerated progress"
+        ]
+      },
+      {
+        "title": "Group Classes",
+        "subtitle": "Collective evolution",
+        "description": "Master pair tactics in small groups. Learn to read the game and develop winning strategies.",
+        "level": "All levels",
+        "groupSize": "3-4 people",
+        "features": [
+          "Technique and tactics",
+          "Group play",
+          "Social environment"
+        ]
+      },
+      {
+        "title": "Personalized Packages",
+        "subtitle": "Memorable experiences",
+        "description": "Create unique moments: special gifts, visits to Valencia or premium experiences. We design your ideal experience.",
+        "level": "Personalized",
+        "features": [
+          "Custom experience design",
+          "Special gifts",
+          "Valencia visits"
+        ]
+      },
+      {
+        "title": "Weekly Experiences",
+        "subtitle": "Elite intensive + local tourism",
+        "description": "Live a week of premium padel in Valencia: training, local tournament and cultural-gastronomic plan.",
+        "level": "All levels",
+        "groupSize": "3-6 people",
+        "features": [
+          "Daily training",
+          "Local tournament",
+          "Paella + tourism"
+        ]
+      }
+    ],
+    "cta": "Request more information"
+  },
+  "whatsapp": {
+    "button": "Chat on WhatsApp",
+    "ariaLabel": "Contact via WhatsApp",
+    "defaultMessage": "Hello! I'm interested in learning more about JA Padel Academy. Could you provide me with information?",
+    "homeMessage": "Hello! I'm interested in booking a class at JA Padel Academy. Could you provide me with information?",
+    "programsMessage": "Hello! I'm interested in learning about JA Padel Academy programs. Could you provide me with information?",
+    "experiencesMessage": "Hello! I'm interested in learning about JA Padel Academy premium experiences. Could you provide me with information?",
+    "academyMessage": "Hello! I'm interested in learning more about JA Padel Academy. Could you provide me with information?"
+  },
+  "meta": {
+    "title": "JA Padel Academy Valencia - Premium Padel Academy",
+    "description": "Premium padel academy in Valencia. Personalized training, exclusive methodology and unique experiences at Origen Padel. Fail Again. Fail Better.",
+    "keywords": [
+      "padel academy Valencia",
+      "padel classes Valencia",
+      "professional padel training",
+      "Origen Padel Valencia",
+      "premium padel Valencia",
+      "padel coaches Valencia",
+      "best padel classes Valencia",
+      "professional padel academy Valencia"
+    ],
+    "siteName": "JA Padel Academy"
+  },
+  "buttons": {
+    "bookClass": "Book Class",
+    "learnMore": "Learn More",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp"
+  },
+  "forms": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "send": "Send",
+    "required": "Required field"
+  },
+  "sections": {
+    "hero": {
+      "title": "JA Padel Academy Valencia",
+      "subtitle": "Premium Padel Academy",
+      "description": "Transform your game with our exclusive methodology. Elite training at Origen Padel Valencia.",
+      "cta": "Book Class"
+    },
+    "programs": {
+      "title": "Our Programs",
+      "subtitle": "Exclusive methodology for all levels",
+      "description": "Discover our programs designed to transform your game",
+      "cta": "View Programs"
+    },
+    "experiences": {
+      "title": "Premium Experiences",
+      "subtitle": "Experience padel in a unique way",
+      "description": "Unique experiences that go beyond training",
+      "cta": "Discover Experiences"
+    },
+    "academy": {
+      "title": "Our Academy",
+      "subtitle": "Discover our history and methodology",
+      "description": "The academy that's changing padel in Valencia",
+      "cta": "Learn About Academy"
+    },
+    "testimonials": {
+      "title": "What our students say",
+      "subtitle": "Real transformation stories"
+    },
+    "stats": {
+      "students": "Students",
+      "years": "Years of experience",
+      "programs": "Programs",
+      "success": "Success rate"
+    }
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "bookNow": "Book Now",
+    "contact": "Contact",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "getStarted": "Get Started",
+    "discover": "Discover"
+  },
+  "experiencesPage": {
+    "title": "JA Padel Academy Valencia - Premium Padel Academy",
+    "description": "JA Padel Academy Valencia - Professional padel training",
+    "hero": {
+      "title": "Live a unique padel experience in Valencia",
+      "subtitle": "Combine high-level training, local competition and Mediterranean tourism. A complete week without worries.",
+      "description": "Combine high-level training, local competition and Mediterranean tourism. A complete week without worries.",
+      "cta1": "Organize my experience",
+      "cta2": "Talk on WhatsApp"
+    },
+    "services": {
+      "title": "We design your custom padel week",
+      "description": "Unique programs adapted to your level and objectives. From technical training to authentic experiences, everything designed for you to enjoy to the maximum.",
+      "cta": "Tell us what you're looking for",
+      "training": {
+        "title": "Training",
+        "description": "Technical, tactical and physical sessions adapted to your level.",
+        "features": [
+          "Individual or group classes",
+          "Physical and tactical training",
+          "Personalized video analysis"
+        ]
+      },
+      "competition": {
+        "title": "Competition",
+        "description": "Local tournaments, friendly matches or training with Valencian players.",
+        "features": [
+          "Tournaments with local players",
+          "Friendly matches",
+          "Training with professionals"
+        ]
+      },
+      "experience": {
+        "title": "Local experience",
+        "description": "Gastronomy, beach, culture and social events.",
+        "features": [
+          "Valencian paella",
+          "Visit to the Albufera",
+          "Beach sunsets"
+        ]
+      },
+      "accommodation": {
+        "title": "Accommodation and logistics",
+        "description": "We help you with hotels, transfers and reservations.",
+        "features": [
+          "Premium hotels",
+          "Airport transfers",
+          "Gastronomic reservations"
+        ]
+      }
+    },
+    "methodology": {
+      "subtitle": "LIVE. TRAIN. COMPETE.",
+      "title": "PADEL EXPERIENCE IN VALENCIA",
+      "description": "We design programs that combine advanced technique, real competition and cultural discovery. Transform your game while exploring the Turia city in an unforgettable week."
+    },
+    "process": {
+      "title": "This is how we organize your experience",
+      "step1": {
+        "title": "Tell us your level and dates",
+        "description": "Brief form or direct message to understand your objectives and availability."
+      },
+      "step2": {
+        "title": "We design your personalized plan",
+        "description": "Schedules, facilities, activities. A complete plan tailored to you."
+      },
+      "step3": {
+        "title": "Enjoy an unforgettable week",
+        "description": "A perfect week. We manage all the details."
+      }
+    },
+    "included": {
+      "title": "What your experience can include",
+      "training": {
+        "title": "Training and competition",
+        "items": [
+          "Individual or group classes",
+          "Physical and tactical training",
+          "Tournaments or matches with local players",
+          "Professional video analysis"
+        ]
+      },
+      "experiences": {
+        "title": "Experiences and leisure",
+        "items": [
+          "Authentic Valencian paella",
+          "Visit to the Albufera by boat",
+          "Beach sunsets",
+          "Professional photos and videos"
+        ]
+      },
+      "services": {
+        "title": "Optional services",
+        "items": [
+          "Physiotherapy and recovery",
+          "Premium accommodation",
+          "Airport ↔ club transfers",
+          "Corporate packages or company groups"
+        ]
+      }
+    },
+    "testimonials": {
+      "title": "What those who have already lived the experience say",
+      "list": [
+        {
+          "text": "It was one of the highlights of my trip. Communication was quick and smooth, and the class was incredible, well-structured and very fun. The trainers were fantastic: professional, friendly and with very useful advice that improved my game.",
+          "name": "Domen Kavzar",
+          "country": "Slovenia"
+        },
+        {
+          "text": "As an intermediate player I had a private class at the academy. It was a first-class lesson! One of the best I've had. The trainers had very good advice and a clear vision of what I should work on.",
+          "name": "Mark Heimgartner",
+          "country": "Netherlands"
+        },
+        {
+          "text": "They were incredible classes! The trainers are experts at indicating the correct balls. They read your padel level very quickly and adapt their exercises. The explanations were clear and we executed at a high pace. The team is very friendly with a lot of humor.",
+          "name": "An",
+          "country": "Netherlands"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Design your JA Padel experience",
+      "description": "Share your objectives and dates. We create the perfect plan for your level and preferences.",
+      "button1": "Contact now",
+      "button2": "Consult on WhatsApp"
+    }
+  },
+  "academyPage": {
+    "title": "JA Padel Academy Valencia - Premium Padel Academy",
+    "description": "JA Padel Academy Valencia - Professional padel training",
+    "hero": {
+      "title": "JA Padel Academy",
+      "subtitle": "Where the game is forged: history, methodology and the team that accompanies you.",
+      "description": "Where the game is forged: history, methodology and the team that accompanies you."
+    },
+    "founder": {
+      "name": "Joan Aparici",
+      "role": "Founder & Technical Director",
+      "bio": "Every player has unique potential waiting to be discovered. My vision is to create a space where error is not an obstacle, but the path to excellence. At JA Padel Academy, we transform every defeat into a lesson and every victory into a new starting point.",
+      "quote": "Padel is not just about winning points, it's about gaining perspective."
+    },
+    "team": {
+      "title": "Coaching team",
+      "coaches": [
+        {
+          "name": "Joan Aparici",
+          "role": "Head Coach",
+          "bio": "Head Coach with proprietary methodology. Specialized in comprehensive player development."
+        },
+        {
+          "name": "Luis Gandasegui",
+          "role": "Senior Coach",
+          "bio": "Senior Coach with 40+ years training professionals. Specialist in technique and tactics."
+        },
+        {
+          "name": "Jordi",
+          "role": "Coach",
+          "bio": "Coach expert in physical preparation and physiotherapy. Injury prevention specialist."
+        },
+        {
+          "name": "Jorge Guillem",
+          "role": "Coach",
+          "bio": "Specialist in competition and matchplay. Applies technique in real situations."
+        },
+        {
+          "name": "Jorge Domingo",
+          "role": "Coach",
+          "bio": "Specialist in technical analysis and gesture correction. Continuous improvement focus."
+        },
+        {
+          "name": "Manu",
+          "role": "Coach",
+          "bio": "Coach with experience at all levels. Specialist in technique and fundamentals."
+        }
+      ]
+    },
+    "methodology": {
+      "title": "JA Methodology",
+      "pillars": [
+        {
+          "title": "Technique",
+          "description": "Efficient gestures, consistency and error control."
+        },
+        {
+          "title": "Tactics",
+          "description": "Game patterns and decision making under pressure."
+        },
+        {
+          "title": "Physical",
+          "description": "Specific strength, movements and prevention."
+        },
+        {
+          "title": "Mental",
+          "description": "Routines, competitive focus and emotional management."
+        }
+      ],
+      "session": "Typical session: specific warm-up → applied technique → tactical situations → directed matchplay → feedback + task plan."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "questions": [
+        {
+          "question": "Do I need a minimum level?",
+          "answer": "No. We evaluate your starting point and design your personal plan."
+        },
+        {
+          "question": "Group size?",
+          "answer": "We work in small groups (4-6) or in individual format."
+        },
+        {
+          "question": "Do you do video analysis?",
+          "answer": "Yes. We offer sessions with technical report and improvement plan."
+        },
+        {
+          "question": "Where are you located?",
+          "answer": "At Origen Padel, Valencia. Easy access and parking."
+        },
+        {
+          "question": "Can I try a class?",
+          "answer": "Yes. Schedule an assessment class to define objectives."
+        },
+        {
+          "question": "Do you work with seniors/children?",
+          "answer": "Yes. We adapt methodology to each stage and objective."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Do you want to know more about our academy?",
+      "description": "Discover our methodology and the team that will take you to the next level"
+    }
+  },
+  "cookiesPage": {
+    "hero": {
+      "title": "Cookie",
+      "titleHighlight": "Policy",
+      "description": "Transparent information about cookie usage at JA Padel Academy",
+      "lastUpdate": "Last updated:",
+      "date": "January 10, 2025"
+    },
+    "intro": {
+      "title": "What are cookies?",
+      "description1": "Cookies are small text files that are stored on your device when you visit our website. These cookies help us improve your browsing experience, analyze site traffic, and personalize content.",
+      "description2": "At JA Padel Academy, we use cookies responsibly and transparently, always respecting your privacy and complying with current regulations (GDPR, LOPD)."
+    },
+    "types": {
+      "title": "Types of cookies we use",
+      "essential": {
+        "title": "Essential Cookies",
+        "description": "These cookies are necessary for the basic functioning of the website and cannot be disabled.",
+        "item1": "Session cookies to keep your session active",
+        "item2": "Security cookies to protect against attacks",
+        "item3": "Language preference cookies",
+        "item4": "Cookie consent cookies"
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "description": "They help us understand how you interact with our site to improve and optimize the experience.",
+        "item1": "Google Analytics for traffic analysis",
+        "item2": "Site performance metrics",
+        "item3": "User behavior analysis",
+        "item4": "Feature usage statistics"
+      },
+      "marketing": {
+        "title": "Marketing Cookies",
+        "description": "To show you personalized content and relevant offers about our services.",
+        "item1": "Facebook Pixel for remarketing",
+        "item2": "Google Ads for personalized advertising",
+        "item3": "Social media cookies",
+        "item4": "Audience segmentation"
+      }
+    },
+    "management": {
+      "title": "How to manage cookies",
+      "website": {
+        "title": "On our website",
+        "description": "You can configure your cookie preferences at any time using the cookie banner that appears at the bottom of the page.",
+        "tip": "Tip:",
+        "tipText": "If you have already accepted cookies, you can change your preferences by clicking \"Configure Preferences\" in the cookie banner."
+      },
+      "browser": {
+        "title": "In your browser",
+        "description": "You can also manage cookies directly from your browser settings:",
+        "chrome": {
+          "title": "Google Chrome",
+          "path": "Settings → Privacy and security → Cookies and site data"
+        },
+        "firefox": {
+          "title": "Mozilla Firefox",
+          "path": "Options → Privacy and security → Cookies and site data"
+        },
+        "safari": {
+          "title": "Safari",
+          "path": "Preferences → Privacy → Cookies and website data"
+        },
+        "edge": {
+          "title": "Microsoft Edge",
+          "path": "Settings → Cookies and site permissions → Cookies and stored data"
+        }
+      }
+    },
+    "duration": {
+      "title": "Cookie duration",
+      "session": {
+        "title": "Session cookies:",
+        "description": "They are deleted when you close the browser"
+      },
+      "persistent": {
+        "title": "Persistent cookies:",
+        "description": "They remain for up to 365 days or until you delete them"
+      },
+      "consent": {
+        "title": "Consent cookies:",
+        "description": "They are maintained until you change your preferences"
+      }
+    },
+    "contact": {
+      "title": "Do you have questions about our cookies?",
+      "description": "If you have any doubts about our cookie policy or want to exercise your rights, don't hesitate to contact us.",
+      "contactButton": "Contact us",
+      "privacyButton": "View Privacy Policy"
+    }
+  },
+  "privacyPage": {
+    "hero": {
+      "title": "Privacy",
+      "titleHighlight": "Policy",
+      "description": "Responsible protection and processing of your personal data",
+      "lastUpdate": "Last updated:",
+      "date": "January 10, 2025"
+    },
+    "intro": {
+      "title": "General Information",
+      "description": "At JA Padel Academy, we are committed to protecting your privacy and processing your personal data responsibly and transparently, complying with current regulations (GDPR, LOPD-GDD).",
+      "responsible": "Data Controller:",
+      "email": "Email:",
+      "phone": "Phone:",
+      "address": "Address:"
+    },
+    "data": {
+      "title": "Data we collect",
+      "identification": {
+        "title": "Identification data",
+        "item1": "First and last name",
+        "item2": "Email address",
+        "item3": "Phone number",
+        "item4": "Date of birth"
+      },
+      "navigation": {
+        "title": "Navigation data",
+        "item1": "IP address",
+        "item2": "Browser information",
+        "item3": "Pages visited",
+        "item4": "Time spent"
+      },
+      "preferences": {
+        "title": "Preference data",
+        "item1": "Cookie preferences",
+        "item2": "Notification settings",
+        "item3": "Sports interests",
+        "item4": "Padel level"
+      }
+    },
+    "purposes": {
+      "title": "Processing purposes",
+      "service": {
+        "title": "Service management",
+        "description": "Process bookings and manage classes"
+      },
+      "communication": {
+        "title": "Communication",
+        "description": "Send confirmations and updates"
+      },
+      "improvement": {
+        "title": "Service improvement",
+        "description": "Analyze usage to optimize experience"
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Send offers and promotions (with consent)"
+      },
+      "legal": {
+        "title": "Legal compliance",
+        "description": "Comply with tax and accounting obligations"
+      },
+      "security": {
+        "title": "Security",
+        "description": "Protect against fraud and ensure security"
+      }
+    },
+    "legal": {
+      "title": "Legal basis for processing",
+      "consent": {
+        "title": "Consent",
+        "description": "For sending commercial communications and using non-essential cookies."
+      },
+      "contractual": {
+        "title": "Contractual execution",
+        "description": "For providing training services and managing bookings."
+      },
+      "legitimate": {
+        "title": "Legitimate interest",
+        "description": "For improving our services and analyzing website usage."
+      },
+      "obligation": {
+        "title": "Legal obligation",
+        "description": "For complying with tax and accounting obligations."
+      }
+    },
+    "rights": {
+      "title": "Your rights",
+      "description": "You have the right to access, rectify, delete, limit, port and object to the processing of your personal data.",
+      "access": {
+        "title": "Access",
+        "description": "Know what data we have about you"
+      },
+      "rectification": {
+        "title": "Rectification",
+        "description": "Correct inaccurate or incomplete data"
+      },
+      "erasure": {
+        "title": "Erasure",
+        "description": "Delete your data when possible"
+      },
+      "limitation": {
+        "title": "Limitation",
+        "description": "Restrict the processing of your data"
+      },
+      "portability": {
+        "title": "Portability",
+        "description": "Receive your data in structured format"
+      },
+      "opposition": {
+        "title": "Opposition",
+        "description": "Object to the processing of your data"
+      }
+    },
+    "retention": {
+      "title": "Data retention",
+      "active": {
+        "title": "Active customer data:",
+        "description": "While you maintain a commercial relationship with us"
+      },
+      "navigation": {
+        "title": "Navigation data:",
+        "description": "Maximum 2 years from last visit"
+      },
+      "accounting": {
+        "title": "Accounting data:",
+        "description": "6 years according to tax regulations"
+      },
+      "marketing": {
+        "title": "Marketing data:",
+        "description": "Until you withdraw consent"
+      }
+    },
+    "security": {
+      "title": "Security measures",
+      "description": "We implement appropriate technical and organizational measures to protect your personal data:",
+      "ssl": {
+        "title": "SSL encryption",
+        "description": "All communications are encrypted"
+      },
+      "access": {
+        "title": "Restricted access",
+        "description": "Only authorized personnel access the data"
+      },
+      "backup": {
+        "title": "Backups",
+        "description": "Regular backup of all data"
+      },
+      "audit": {
+        "title": "Regular audits",
+        "description": "Periodic review of security measures"
+      }
+    },
+    "contact": {
+      "title": "Exercise your rights",
+      "description": "To exercise any of your rights or if you have questions about the processing of your data, you can contact us in the following ways:",
+      "direct": {
+        "title": "Direct contact",
+        "email": "Email: japadelacademy@gmail.com",
+        "phone": "Phone: +34 644 46 58 73",
+        "address": "Address: Origen Padel, Valencia, Spain"
+      },
+      "authority": {
+        "title": "Control authority",
+        "name": "Spanish Data Protection Agency",
+        "web": "Web: www.aepd.es",
+        "phone": "Phone: 901 100 099"
+      },
+      "contactButton": "Contact us",
+      "cookiesButton": "View Cookie Policy"
+    }
+  },
+  "notFound": {
+    "errorCode": "404 - Page not found",
+    "title": "You hit it out",
+    "description": "But it's okay... keep training. Let's get back on court.",
+    "homeButton": "Back to home",
+    "programsButton": "View programs"
+  }
+}

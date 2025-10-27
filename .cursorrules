@@ -1,0 +1,668 @@
+# JA Padel Academy - Cursor Rules
+# Academia Premium de Pádel - Next.js 15 + TypeScript + Tailwind CSS
+
+## 🎯 CONTEXTO DEL PROYECTO
+Este es un proyecto Next.js 15 de alta gama para JA Padel Academy, una academia premium de pádel en Valencia. 
+- **Stack**: Next.js 15, React 19, TypeScript, Tailwind CSS, GSAP, Radix UI
+- **Arquitectura**: App Router, Server Components, Client Components
+- **Diseño**: Sistema premium con paleta dorada (#D4AF37), negro profundo (#0A0A0A), gris cemento (#B0B0B0)
+- **Fuentes**: Clash Display (títulos), Inter (texto), Playfair Display (elegante), Poppins (secundaria)
+
+## 🧠 EXPERTISE
+- **Marketing Digital 2025**: Estrategias avanzadas, conversión, UX/UI optimizada
+- **SEO Técnico**: Core Web Vitals, Schema.org, meta tags dinámicos, performance
+- **GSAP Master**: Animaciones complejas, ScrollTrigger, Timeline, Physics, Performance
+- **Growth Hacking**: A/B testing, analytics, funnel optimization, user psychology
+
+## 🏗️ ARQUITECTURA Y ESTRUCTURA
+
+### Estructura de Carpetas
+```
+app/                    # App Router (Next.js 15)
+├── page.tsx           # Página principal
+├── academia/           # Página de academia
+├── experiencias/       # Página de experiencias
+├── programas/         # Página de programas
+├── layout.tsx         # Layout raíz con metadata SEO
+└── globals.css        # Estilos globales premium
+
+components/            # Componentes organizados por categoría
+├── animations/        # Componentes de animación (GSAP)
+├── cards/            # Cards reutilizables
+├── forms/            # Formularios
+├── layout/           # Header, Footer, navegación
+├── maps/             # Componentes de mapas (Google Maps)
+├── sections/         # Secciones de página
+└── ui/               # Componentes UI base (shadcn/ui)
+
+lib/                  # Utilidades y configuración
+├── utils.ts          # Funciones utilitarias
+├── config.ts         # Configuración del proyecto
+├── analytics.ts      # Google Analytics
+└── gsap-loader.ts    # Carga optimizada de GSAP
+```
+
+### Convenciones de Naming
+- **Componentes**: PascalCase (ej: `SpectacularHero.tsx`)
+- **Archivos**: kebab-case para utilidades (ej: `use-mobile.tsx`)
+- **Variables**: camelCase
+- **Constantes**: UPPER_SNAKE_CASE
+- **CSS Classes**: kebab-case con prefijos semánticos
+
+## 🎨 SISTEMA DE DISEÑO PREMIUM
+
+### Paleta de Colores
+```css
+/* Colores principales */
+--brand-white: #FFFFFF
+--brand-black: #0A0A0A  
+--brand-gold: #D4AF37
+--brand-cement: #B0B0B0
+--brand-light: #F5F5F5
+
+/* Gradientes premium */
+.gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F5C842 50%, #D4AF37 100%)
+.gold-text-gradient: background-clip: text con gradiente dorado
+```
+
+### Tipografía
+- **H1-H3**: Clash Display (impacto visual)
+- **H4-H6**: Inter (legibilidad)
+- **Body**: Inter (consistencia)
+- **Accent**: Playfair Display (elegancia)
+
+### Componentes UI
+- Usar shadcn/ui como base
+- Extender con variantes premium
+- Mantener consistencia con `cn()` utility
+- Implementar hover effects sofisticados
+
+## 🚀 MEJORES PRÁCTICAS NEXT.JS 15
+
+### App Router
+```typescript
+// ✅ Server Components por defecto
+export default function Page() {
+  return <div>Server Component</div>
+}
+
+// ✅ Client Components solo cuando necesario
+"use client"
+import { useState } from "react"
+```
+
+### Metadata y SEO Avanzado 2025
+```typescript
+// ✅ SEO Técnico de primer nivel con Core Web Vitals
+export const metadata: Metadata = {
+  title: {
+    default: "JA Padel Academy Valencia - Academia Premium de Pádel",
+    template: "%s | JA Padel Academy Valencia"
+  },
+  description: "Academia premium de pádel en Valencia. Metodología exclusiva, entrenadores de élite. Fail Again. Fail Better.",
+  keywords: [
+    "academia pádel Valencia",
+    "clases pádel Valencia", 
+    "entrenamiento pádel profesional",
+    "Origen Padel Valencia",
+    "pádel premium Valencia",
+    "entrenadores pádel Valencia",
+    "mejores clases pádel Valencia"
+  ],
+  authors: [{ name: "JA Padel Academy Valencia" }],
+  creator: "JA Padel Academy",
+  publisher: "JA Padel Academy",
+  metadataBase: new URL("https://japadel.com"),
+  alternates: {
+    canonical: "/",
+    languages: { "es-ES": "/" }
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    url: "https://japadel.com",
+    siteName: "JA Padel Academy",
+    title: "JA Padel Academy Valencia - Academia Premium de Pádel",
+    description: "Transforma tu juego con nuestra metodología exclusiva. Entrenamientos de élite en Origen Padel Valencia.",
+    images: [{
+      url: "/images/og-valencia.jpg",
+      width: 1200,
+      height: 630,
+      alt: "JA Padel Academy Valencia - Academia Premium de Pádel en Origen Padel"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JA Padel Academy Valencia - Academia Premium",
+    description: "🏆 Academia de pádel #1 en Valencia. Entrenamientos de élite con metodología exclusiva.",
+    images: ["/images/twitter-valencia.jpg"],
+    creator: "@japadel_valencia"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  verification: {
+    google: "your-google-verification-code"
+  }
+}
+
+// ✅ Schema.org Structured Data para SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  name: "JA Padel Academy Valencia",
+  description: "Academia de pádel premium en Valencia con entrenamientos profesionales",
+  url: "https://japadel.com",
+  telephone: "+34960123456",
+  email: "info@japadel.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Origen Padel, Calle del Pádel 123",
+    addressLocality: "Valencia",
+    addressRegion: "Comunidad Valenciana",
+    postalCode: "46001",
+    addressCountry: "ES"
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "39.4699",
+    longitude: "-0.3763"
+  },
+  openingHours: "Mo-Su 07:00-23:00",
+  priceRange: "€€",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "500",
+    bestRating: "5",
+    worstRating: "1"
+  },
+  sport: "Padel"
+}
+```
+
+### Optimización de Imágenes
+```typescript
+// ✅ Next.js Image con optimizaciones
+<Image
+  src="/images/hero.jpg"
+  alt="Descripción accesible"
+  fill
+  className="object-cover"
+  priority // Para imágenes críticas
+  sizes="100vw"
+  quality={90}
+  placeholder="blur"
+  blurDataURL="data:image/jpeg;base64,..."
+/>
+```
+
+## 🎭 ANIMACIONES GSAP AVANZADAS
+
+### Patrón de Carga GSAP Optimizado
+```typescript
+// ✅ Carga dinámica con error handling y performance
+useEffect(() => {
+  const loadGSAP = async () => {
+    try {
+      const { gsap } = await import("gsap")
+      const { ScrollTrigger } = await import("gsap/ScrollTrigger")
+      const { MotionPathPlugin } = await import("gsap/MotionPathPlugin")
+      
+      gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
+      
+      // Configuración global de performance
+      gsap.config({
+        nullTargetWarn: false,
+        trialWarn: false
+      })
+      
+      // Configurar ScrollTrigger global
+      ScrollTrigger.config({
+        ignoreMobileResize: true,
+        syncRefresh: true
+      })
+    } catch (error) {
+      console.error("Error loading GSAP:", error)
+    }
+  }
+  loadGSAP()
+}, [])
+```
+
+### Animaciones Avanzadas - Patrones Master
+```typescript
+// ✅ Timeline complejo con physics
+const masterTimeline = gsap.timeline({ 
+  paused: true,
+  defaults: { ease: "power2.out" }
+})
+
+// ✅ ScrollTrigger con markers y debugging
+ScrollTrigger.create({
+  trigger: element,
+  start: "top 80%",
+  end: "bottom 20%",
+  scrub: 1,
+  markers: process.env.NODE_ENV === 'development',
+  onEnter: () => gsap.to(element, { 
+    y: 0, 
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out"
+  })
+})
+
+// ✅ Animaciones con physics y interacción
+const handleMouseMove = (e) => {
+  const { clientX, clientY } = e
+  const { innerWidth, innerHeight } = window
+  
+  const xPercent = (clientX / innerWidth - 0.5) * 2
+  const yPercent = (clientY / innerHeight - 0.5) * 2
+  
+  gsap.to('.parallax-element', {
+    x: xPercent * 30,
+    y: yPercent * 30,
+    duration: 0.3,
+    ease: "power2.out"
+  })
+}
+```
+
+### Componente SectionReveal Avanzado
+```typescript
+// ✅ Wrapper con múltiples tipos de animación
+<SectionReveal 
+  animation="slideUp" 
+  delay={0.1}
+  duration={1.2}
+  ease="power3.out"
+  stagger={0.1}
+  onComplete={() => console.log('Animation complete')}
+>
+  <Componente />
+</SectionReveal>
+```
+
+### Optimizaciones GSAP Premium
+- Usar `transform-gpu` y `will-change` estratégicamente
+- Implementar `requestAnimationFrame` para smoothness
+- Lazy loading de plugins GSAP específicos
+- Desactivar animaciones en `prefers-reduced-motion`
+- Usar `gsap.matchMedia()` para responsive animations
+- Implementar cleanup en `useEffect` return
+- Usar `ScrollTrigger.batch()` para múltiples elementos
+- Optimizar con `gsap.set()` para estados iniciales
+
+## 🎯 COMPONENTES Y PATRONES
+
+### Estructura de Componentes
+```typescript
+// ✅ Patrón estándar para componentes
+interface ComponentProps {
+  children: React.ReactNode
+  className?: string
+  // Props específicas
+}
+
+export default function Component({ 
+  children, 
+  className = "",
+  ...props 
+}: ComponentProps) {
+  return (
+    <div className={cn("base-classes", className)} {...props}>
+      {children}
+    </div>
+  )
+}
+```
+
+### Hooks Personalizados
+```typescript
+// ✅ Hooks en /hooks/ con prefijo use-
+export function useMobile() {
+  // Lógica del hook
+}
+```
+
+### Utilidades
+```typescript
+// ✅ Funciones utilitarias en /lib/utils.ts
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
+export function formatPrice(price: number, currency = "EUR") {
+  return new Intl.NumberFormat("es-ES", {
+    style: "currency",
+    currency,
+  }).format(price)
+}
+```
+
+## 🎨 TAILWIND CSS PREMIUM
+
+### Clases Personalizadas
+```css
+/* ✅ Clases premium en globals.css */
+.section-premium { @apply bg-brand-white border-t border-cement-200; }
+.section-dark-premium { @apply bg-brand-black text-brand-white; }
+.card-premium { @apply bg-brand-white border border-cement-200 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300; }
+```
+
+### Sistema de Espaciado
+```css
+.section-spacing-premium { @apply py-20 lg:py-32; }
+.content-spacing-premium { @apply mb-12 lg:mb-16; }
+.title-spacing-premium { @apply mb-8 lg:mb-12; }
+```
+
+### Efectos Hover Premium
+```css
+.hover-lift { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.hover-lift:hover { transform: translateY(-8px) scale(1.02); }
+```
+
+## 📱 RESPONSIVE DESIGN
+
+### Breakpoints
+- **Mobile**: < 640px
+- **Tablet**: 640px - 1024px  
+- **Desktop**: > 1024px
+- **Large**: > 1280px
+
+### Mobile First
+```css
+/* ✅ Mobile first approach */
+.mobile-stack { flex-direction: column; gap: 1rem; }
+.mobile-compact { padding: 1rem !important; }
+.mobile-text-center { text-align: center; }
+```
+
+## ♿ ACCESIBILIDAD
+
+### Estándares WCAG
+- Usar `aria-label` para elementos interactivos
+- Implementar `role` attributes apropiados
+- Mantener contraste de color adecuado
+- Soporte para navegación por teclado
+- Skip links para navegación
+
+### Componentes Accesibles
+```typescript
+// ✅ Patrón accesible
+<button 
+  className="btn-premium"
+  aria-label="Reservar clase gratuita"
+  type="button"
+>
+  Reservar Clase
+</button>
+```
+
+## 🚀 PERFORMANCE
+
+### Optimizaciones Next.js
+- Server Components por defecto
+- Client Components solo cuando necesario
+- Lazy loading de GSAP
+- Optimización de imágenes con Next.js Image
+- Preload de recursos críticos
+
+### Bundle Optimization
+```javascript
+// ✅ next.config.mjs
+experimental: {
+  optimizePackageImports: ['gsap', 'lucide-react', '@vercel/analytics'],
+  optimizeCss: false,
+  scrollRestoration: true,
+}
+```
+
+## 🔧 DESARROLLO
+
+### Scripts Disponibles
+```json
+{
+  "dev": "next dev",
+  "build": "next build", 
+  "start": "next start",
+  "lint": "next lint"
+}
+```
+
+### Herramientas
+- **TypeScript**: Configuración estricta
+- **ESLint**: Reglas Next.js
+- **Tailwind**: Configuración personalizada
+- **shadcn/ui**: Componentes base
+- **GSAP**: Animaciones premium
+
+## 📝 CONVENCIONES DE CÓDIGO
+
+### Imports
+```typescript
+// ✅ Orden de imports
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import Header from "@/components/layout/Header"
+import { Analytics } from "@vercel/analytics/react"
+```
+
+### Exports
+```typescript
+// ✅ Named exports para componentes
+export default function Component() { }
+export { Component }
+
+// ✅ Named exports para utilidades
+export function utility() { }
+export const CONSTANT = "value"
+```
+
+### TypeScript
+```typescript
+// ✅ Interfaces para props
+interface ComponentProps {
+  title: string
+  description?: string
+  children: React.ReactNode
+}
+
+// ✅ Tipos para eventos
+type ButtonClickEvent = React.MouseEvent<HTMLButtonElement>
+```
+
+## 🎯 REGLAS ESPECÍFICAS PARA CURSOR
+
+### Al crear componentes:
+1. Usar Server Components por defecto
+2. Marcar Client Components con `"use client"`
+3. Implementar TypeScript interfaces
+4. Usar `cn()` para clases condicionales
+5. Seguir el patrón de naming del proyecto
+
+### Al modificar estilos:
+1. Usar clases Tailwind existentes
+2. Extender con clases personalizadas en globals.css
+3. Mantener consistencia con el sistema de diseño
+4. Implementar hover effects premium
+5. Asegurar responsive design
+
+### Al implementar animaciones:
+1. Usar el patrón de carga dinámica de GSAP
+2. Implementar SectionReveal para secciones
+3. Optimizar para performance
+4. Desactivar en móvil si es necesario
+5. Usar `transform-gpu` para aceleración
+
+### Al trabajar con datos:
+1. Usar Server Components para datos estáticos
+2. Implementar loading states apropiados
+3. Manejar errores gracefully
+4. Optimizar con Next.js caching
+
+## 🚀 MARKETING Y CONVERSIÓN 2025
+
+### Estrategias de Conversión Avanzadas
+```typescript
+// ✅ CTAs optimizados con psicología de conversión
+const CTAPremium = () => (
+  <button className="cta-premium">
+    <span className="cta-text">Reserva tu clase gratuita</span>
+    <span className="cta-urgency">Solo quedan 3 plazas</span>
+  </button>
+)
+
+// ✅ Social proof y testimonios estratégicos
+const TestimonialSection = () => (
+  <section className="testimonials-premium">
+    <div className="social-proof-badge">
+      <span>500+ alumnos satisfechos</span>
+    </div>
+  </section>
+)
+
+// ✅ Urgencia y escasez (FOMO)
+const UrgencyBanner = () => (
+  <div className="urgency-banner">
+    <span>🔥 Oferta limitada: 20% descuento hasta el 31 de enero</span>
+  </div>
+)
+```
+
+### Analytics y Tracking Avanzado
+```typescript
+// ✅ Eventos de conversión estratégicos
+const trackConversion = (eventName: string, value?: number) => {
+  // Google Analytics 4
+  gtag('event', eventName, {
+    event_category: 'conversion',
+    value: value,
+    custom_parameters: {
+      academy: 'JA Padel Academy',
+      location: 'Valencia'
+    }
+  })
+  
+  // Facebook Pixel
+  fbq('track', 'Purchase', {
+    value: value,
+    currency: 'EUR'
+  })
+}
+
+// ✅ Heatmaps y user behavior
+const trackUserBehavior = () => {
+  // Hotjar, FullStory, etc.
+  if (typeof window !== 'undefined') {
+    window.hj = window.hj || function(){(window.hj.q=window.hj.q||[]).push(arguments)}
+  }
+}
+```
+
+### SEO Técnico Avanzado
+```typescript
+// ✅ Core Web Vitals optimization
+const optimizePerformance = () => {
+  // Lazy loading estratégico
+  // Preload critical resources
+  // Optimize images with WebP/AVIF
+  // Minimize CLS (Cumulative Layout Shift)
+}
+
+// ✅ Schema.org dinámico
+const generateSchemaMarkup = (data: any) => ({
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  name: data.name,
+  description: data.description,
+  // ... más propiedades dinámicas
+})
+```
+
+## 🎭 GSAP MASTER PATTERNS
+
+### Animaciones de Conversión
+```typescript
+// ✅ Animaciones que guían al usuario hacia la conversión
+const conversionAnimation = () => {
+  gsap.timeline()
+    .to('.cta-button', {
+      scale: 1.05,
+      duration: 0.3,
+      yoyo: true,
+      repeat: -1,
+      ease: "power2.inOut"
+    })
+    .to('.social-proof', {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power3.out"
+    }, "-=0.4")
+}
+
+// ✅ Micro-interacciones que aumentan engagement
+const microInteractions = () => {
+  gsap.to('.hover-element', {
+    scale: 1.02,
+    duration: 0.2,
+    ease: "power2.out"
+  })
+}
+```
+
+## 🚨 REGLAS CRÍTICAS
+
+### ❌ NO HACER
+- No usar `useEffect` en Server Components
+- No importar GSAP en Server Components
+- No hardcodear colores (usar sistema de diseño)
+- No crear componentes sin TypeScript
+- No ignorar accesibilidad
+- No implementar animaciones sin considerar performance
+- No olvidar tracking de conversiones
+- No crear CTAs sin urgencia/escasez
+
+### ✅ SIEMPRE HACER
+- Usar `cn()` para clases condicionales
+- Implementar metadata SEO completa con Schema.org
+- Optimizar imágenes con Next.js Image
+- Seguir patrones de naming del proyecto
+- Mantener consistencia visual
+- Implementar animaciones GSAP optimizadas
+- Añadir tracking de conversiones estratégico
+- Crear CTAs con psicología de conversión
+- Optimizar Core Web Vitals
+- Implementar social proof y testimonios
+
+## 🎨 BRANDING Y CONSISTENCIA
+
+### Identidad Visual
+- **Colores**: Negro profundo, dorado premium, gris cemento
+- **Tipografía**: Clash Display para impacto, Inter para legibilidad
+- **Efectos**: Hover lifts, gradientes dorados, sombras premium
+- **Espaciado**: Sistema de espaciado consistente
+
+### Mensaje de Marca
+- "Fail Again. Fail Better." - Filosofía de mejora continua
+- "Entrena Distinto" - Diferenciación en el mercado
+- Premium, exclusivo, profesional
+- Enfoque en la experiencia del usuario
+
+---
+
+**Nota**: Este proyecto representa la excelencia en desarrollo web moderno. Mantén siempre los más altos estándares de calidad, performance y accesibilidad. Cada línea de código debe reflejar el nivel premium de JA Padel Academy.
