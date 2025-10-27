@@ -13,19 +13,9 @@ export default function CallToActionPremium() {
   const sectionRef = useRef<HTMLElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
 
-  // Función para abrir WhatsApp
-  const openWhatsApp = () => {
-    const message = WHATSAPP_CONFIG.messages.home
-    const url = generateWhatsAppUrl(WHATSAPP_CONFIG.phoneNumber, message)
-    
-    // Tracking
-    trackWhatsAppEvent(
-      WHATSAPP_CONFIG.tracking.events.whatsapp_cta_click,
-      'home',
-      'cta'
-    )
-    
-    window.open(url, '_blank', 'noopener,noreferrer')
+  // Función para abrir inscripción
+  const openInscription = () => {
+    window.open('https://web.rockthesport.com/es', '_blank', 'noopener,noreferrer')
   }
 
   useEffect(() => {
@@ -79,9 +69,6 @@ export default function CallToActionPremium() {
             <span className="text-brand-gold">PLAZA</span>
           </h2>
 
-          <p className="text-xl sm:text-2xl text-cement-600 mb-12 lg:mb-16 leading-relaxed max-w-4xl mx-auto font-light">
-            Plazas limitadas – Inscríbete hoy
-          </p>
           <p className="text-lg text-cement-500 mb-8">
             También puedes suscribirte al boletín para novedades, sorteos y descuentos.
           </p>
@@ -89,7 +76,7 @@ export default function CallToActionPremium() {
           {/* CTA Buttons - Angular y limpio */}
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
             <button 
-              onClick={openWhatsApp}
+              onClick={openInscription}
               className="bg-brand-gold hover:bg-brand-gold/90 text-brand-black px-12 py-5 font-black text-xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-4 group transform -skew-x-3 hover:skew-x-0"
             >
               <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />

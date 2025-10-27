@@ -177,6 +177,7 @@ export default function EventInfo() {
             <Button 
               size="lg"
               className="bg-brand-black hover:bg-brand-black/90 text-white px-8 py-4 text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
+              onClick={() => window.open('https://web.rockthesport.com/es', '_blank', 'noopener,noreferrer')}
             >
               ¡INSCRÍBETE YA!
             </Button>

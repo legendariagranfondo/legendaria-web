@@ -74,12 +74,13 @@ export default function CookieConsentPremium() {
           <div className="cookie-content">
             <div className="cookie-title">
               <span className="text-2xl">🍪</span>
-              <span>Uso de Cookies en JA Padel Academy</span>
+              <span>Uso de Cookies en La Legendaria</span>
             </div>
             
             <div className="cookie-description">
-              Utilizamos cookies para mejorar tu experiencia, analizar el tráfico del sitio y personalizar el contenido. 
-              Al continuar navegando, aceptas nuestro uso de cookies según nuestra política de privacidad.
+              Utilizamos cookies para mejorar tu experiencia en nuestro sitio web del evento ciclista La Legendaria, 
+              analizar el tráfico y personalizar el contenido. Al continuar navegando, aceptas nuestro uso de cookies 
+              según nuestra política de privacidad.
             </div>
             
             <div className="cookie-links">
@@ -165,7 +166,7 @@ export default function CookieConsentPremium() {
                   <div>
                     <div className="cookie-category-title">Cookies Analíticas</div>
                     <div className="cookie-category-description">
-                      Nos ayudan a entender cómo interactúas con nuestro sitio para mejorarlo.
+                      Nos ayudan a entender cómo interactúas con nuestro sitio web de La Legendaria para mejorar la experiencia del evento.
                     </div>
                   </div>
                   <button
@@ -184,7 +185,7 @@ export default function CookieConsentPremium() {
                   <div>
                     <div className="cookie-category-title">Cookies de Marketing</div>
                     <div className="cookie-category-description">
-                      Para mostrarte contenido personalizado y ofertas relevantes.
+                      Para mostrarte información relevante sobre La Legendaria y otros eventos ciclistas relacionados.
                     </div>
                   </div>
                   <button

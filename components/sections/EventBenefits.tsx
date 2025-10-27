@@ -181,6 +181,7 @@ export default function EventBenefits() {
             {/* CTA Button */}
             <button 
               className="bg-brand-gold hover:bg-brand-gold/90 text-brand-black px-8 py-4 text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              onClick={() => window.open('https://web.rockthesport.com/es', '_blank', 'noopener,noreferrer')}
             >
               ¡INSCRÍBETE AHORA!
             </button>

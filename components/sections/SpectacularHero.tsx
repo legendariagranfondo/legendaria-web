@@ -28,16 +28,9 @@ export default function SpectacularHero() {
     setMousePosition({ x: e.clientX, y: e.clientY })
   }, [])
 
-  // Función para manejar click de WhatsApp
-  const handleWhatsAppClick = () => {
-    const message = getContextualMessage('home')
-    const url = generateWhatsAppUrl("+34644465873", message)
-    
-    // Track del evento
-    trackWhatsAppEvent('whatsapp_hero_click', 'hero', 'reservar_clase')
-    
-    // Abrir WhatsApp
-    window.open(url, '_blank', 'noopener,noreferrer')
+  // Función para manejar click de inscripción
+  const handleInscriptionClick = () => {
+    window.open('https://web.rockthesport.com/es', '_blank', 'noopener,noreferrer')
   }
 
   useEffect(() => {
@@ -128,37 +121,6 @@ export default function SpectacularHero() {
               }, 0.8)
             }
 
-            // 4. CTA - MAGNETIC EMERGENCE
-            masterTL.fromTo(ctaElement,
-              { opacity: 0, y: 60, scale: 0.8, rotationY: -10 },
-              { opacity: 1, y: 0, scale: 1, rotationY: 0, duration: 1, ease: "back.out(1.4)" },
-              1.5
-            )
-            let isHovering = false
-            const onCtaEnter = () => {
-              if (!isHovering) {
-                isHovering = true
-                gsap.to(ctaElement, { scale: 1.05, rotationY: 5, z: 20, duration: 0.4, ease: "power2.out" })
-              }
-            }
-            const onCtaLeave = () => {
-              isHovering = false
-              gsap.to(ctaElement, { scale: 1, rotationY: 0, z: 0, duration: 0.4, ease: "power2.out" })
-            }
-            const onCtaMouseMove = (e: MouseEvent) => {
-              if (isHovering) {
-                const rect = ctaElement.getBoundingClientRect()
-                const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20
-                const y = ((e.clientY - rect.top) / rect.height - 0.5) * 20
-                gsap.to(ctaElement, { rotationY: x * 0.5, rotationX: -y * 0.5, duration: 0.3, ease: "power2.out" })
-              }
-            }
-            ctaElement.addEventListener('mouseenter', onCtaEnter)
-            ctaElement.addEventListener('mouseleave', onCtaLeave)
-            ctaElement.addEventListener('mousemove', onCtaMouseMove as any)
-            createdEventListeners.push({ target: ctaElement, type: 'mouseenter', handler: onCtaEnter as any })
-            createdEventListeners.push({ target: ctaElement, type: 'mouseleave', handler: onCtaLeave as any })
-            createdEventListeners.push({ target: ctaElement, type: 'mousemove', handler: onCtaMouseMove as any })
 
             // 5. FLOATING ELEMENTS - PHYSICS BASED
             const floatingElements = root!.querySelectorAll('.floating-element')
@@ -279,13 +241,13 @@ export default function SpectacularHero() {
       {/* Imagen Hero Crítica - Optimizada para LCP */}
       <div className="hero-bg absolute inset-0 z-0">
         <Image
-          src="/images/legendaria.jpeg"
+          src="/images/hero.horizontal.png"
           alt="Ciclistas en La Legendaria - Gran Fondo de Ontinyent"
           fill
           className="object-cover"
           priority
           sizes="100vw"
-          quality={95}
+          quality={90}
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           style={{
@@ -351,15 +313,15 @@ export default function SpectacularHero() {
             {/* CTA PRINCIPAL */}
             <div className="mb-12 lg:mb-16 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button 
-                onClick={handleWhatsAppClick}
-                className="hero-cta bg-brand-gold text-brand-black px-8 py-4 lg:px-12 lg:py-5 text-lg lg:text-xl font-bold transition-all duration-300 shadow-lg transform-gpu perspective-1000 parallax-medium focus:outline-none focus:ring-4 focus:ring-brand-gold/50 focus:ring-offset-2 transform -skew-x-3 hover:skew-x-0"
+                onClick={handleInscriptionClick}
+                className="hero-cta bg-brand-gold text-brand-black px-8 py-4 lg:px-12 lg:py-5 text-lg lg:text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-brand-gold/50 focus:ring-offset-2"
                 aria-label="Inscribirse en La Legendaria"
                 type="button"
               >
                 Inscríbete ahora
               </button>
               <button 
-                className="hero-cta bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-black px-8 py-4 lg:px-12 lg:py-5 text-lg lg:text-xl font-bold transition-all duration-300 shadow-lg transform-gpu perspective-1000 parallax-medium focus:outline-none focus:ring-4 focus:ring-white/50 focus:ring-offset-2"
+                className="hero-cta bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-black px-8 py-4 lg:px-12 lg:py-5 text-lg lg:text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50 focus:ring-offset-2"
                 aria-label="Ver recorrido de La Legendaria"
                 type="button"
               >

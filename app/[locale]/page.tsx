@@ -3,10 +3,8 @@ import AcademyHeritage from "@/components/sections/AcademyHeritage"
 import EventBenefits from "@/components/sections/EventBenefits"
 import EventInfo from "@/components/sections/EventInfo"
 import SponsorsSection from "@/components/sections/SponsorsSection"
-import CommerceOffer from "@/components/sections/CommerceOffer"
 import FAQSection from "@/components/sections/FAQSection"
 import CallToActionPremium from "@/components/sections/CallToActionPremium"
-import FloatingInscriptionButton from "@/components/ui/FloatingInscriptionButton"
 
 import SectionReveal from "@/components/animations/SectionReveal"
 import ParallaxSection from "@/components/animations/ParallaxSection"
@@ -48,21 +46,13 @@ export default function HomePage() {
         <SponsorsSection />
       </SectionReveal>
 
-      {/* 6. Oferta para comercios - H2 */}
-      <SectionReveal animation="slideUp" delay={0.2}>
-        <CommerceOffer />
-      </SectionReveal>
-
-      {/* 7. FAQ - H2 */}
+      {/* 6. FAQ - H2 */}
       <SectionReveal animation="fade" delay={0.1}>
         <FAQSection />
       </SectionReveal>
 
-      {/* 8. CTA final - H2 */}
+      {/* 7. CTA final - H2 */}
       <CallToActionPremium />
-
-      {/* Botón flotante de inscripción */}
-      <FloatingInscriptionButton />
     </>
   )
 }

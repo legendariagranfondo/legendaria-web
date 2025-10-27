@@ -83,26 +83,14 @@ export default function Header() {
   }, [isMobileMenuOpen])
 
   // Navegación con traducciones y idioma actual
-  const navigation = [
-    { name: isReady ? t("navigation.home") : "Inicio", href: `/${currentLocale}` },
-    { name: isReady ? t("navigation.programs") : "Programas", href: `/${currentLocale}/programas` },
-    { name: isReady ? t("navigation.experiences") : "Experiencias Premium", href: `/${currentLocale}/experiencias` },
-    { name: isReady ? t("navigation.academy") : "Academia", href: `/${currentLocale}/academia` },
-  ]
+  const navigation = []
 
 
   const forceDark = typeof document !== "undefined" && document.documentElement.classList.contains("force-dark-header")
 
-  // Función para manejar click de WhatsApp
-  const handleWhatsAppClick = () => {
-    const message = getContextualMessage('home')
-    const url = generateWhatsAppUrl("+34644465873", message)
-    
-    // Track del evento
-    trackWhatsAppEvent('whatsapp_header_click', 'header', 'reservar_clase')
-    
-    // Abrir WhatsApp
-    window.open(url, '_blank', 'noopener,noreferrer')
+  // Función para manejar click de inscripción
+  const handleInscriptionClick = () => {
+    window.open('https://web.rockthesport.com/es', '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -205,12 +193,12 @@ export default function Header() {
             
             {/* CTA Button */}
             <Button 
-              onClick={handleWhatsAppClick}
+              onClick={handleInscriptionClick}
               className={`px-6 py-3 font-black text-sm transform -skew-x-3 hover:skew-x-0 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border-2 ${
                 (forceDark || isScrolled) ? "bg-white text-brand-black hover:bg-brand-black hover:text-white border-brand-black" : "bg-white/10 text-white hover:bg-brand-gold hover:text-brand-black border-white/50 hover:border-brand-gold"
               }`}
             >
-              {isReady ? t("buttons.bookClass") : "Reservar Clase"}
+              ¡INSCRÍBETE!
             </Button>
           </div>
 
@@ -258,10 +246,10 @@ export default function Header() {
             
             <div className="px-4 pt-4">
               <Button 
-                onClick={handleWhatsAppClick}
+                onClick={handleInscriptionClick}
                 className="w-full bg-white text-brand-black px-6 py-3 font-black text-sm transform -skew-x-3 hover:skew-x-0 hover:scale-105 hover:bg-brand-black hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-brand-black"
               >
-                {isReady ? t("buttons.bookClass") : "Reservar Clase"}
+                ¡INSCRÍBETE!
               </Button>
             </div>
           </div>
