@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation"
 import { generateWhatsAppUrl, getContextualMessage, trackWhatsAppEvent } from "@/lib/whatsapp-config"
 import { useTranslations } from "@/hooks/use-translations"
 import { useLanguagePreference } from "@/hooks/use-language-preference"
-import LanguageSelector from "@/components/ui/LanguageSelector"
 
 export default function Header() {
   const pathname = usePathname()
@@ -90,7 +89,7 @@ export default function Header() {
 
   // Función para manejar click de inscripción
   const handleInscriptionClick = () => {
-    window.open('https://web.rockthesport.com/es', '_blank', 'noopener,noreferrer')
+    window.open('https://www.rockthesport.com/es/evento/legendaria-ontinyent-gran-fondo', '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -182,14 +181,9 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-4">
-            {/* Language Selector */}
-            <LanguageSelector 
-              variant="minimal" 
-              size="sm" 
-              showLabel={false}
-            />
+          {/* Actions (CTA visible también en móvil) */}
+          <div className="flex items-center space-x-4">
+            {/* Language Selector retirado temporalmente */}
             
             {/* CTA Button */}
             <Button 
@@ -202,58 +196,10 @@ export default function Header() {
             </Button>
           </div>
 
-          {/* Mobile Language Selector + Menu Button */}
-          <div className="md:hidden flex items-center gap-3">
-            {/* Mobile Language Selector */}
-            <LanguageSelector 
-              variant="minimal" 
-              size="sm" 
-              showLabel={false}
-              className=""
-            />
-            
-            {/* Mobile Menu Button */}
-            <button
-              className={`transition-all duration-300 hover:scale-110 hover:skew-x-1 transform ${
-                isScrolled ? "text-slate-900 hover:text-brand-gold" : "text-white hover:text-brand-gold"
-              }`}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle mobile menu"
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+          {/* Mobile menu retirado: solo CTA */}
         </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg border border-slate-200 relative z-40 max-w-sm mx-auto animate-in slide-in-from-top-2 duration-300">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`block px-4 py-3 transition-all duration-300 hover:scale-105 hover:skew-x-1 transform bg-transparent hover:bg-transparent shadow-none hover:shadow-none ${
-                  (item.href === `/${currentLocale}` ? pathname === `/${currentLocale}` : pathname.startsWith(item.href))
-                    ? "text-brand-gold font-semibold"
-                    : "text-slate-700 hover:text-brand-gold"
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-                aria-current={(item.href === `/${currentLocale}` ? pathname === `/${currentLocale}` : pathname.startsWith(item.href)) ? "page" : undefined}
-              >
-                {item.name}
-              </Link>
-            ))}
-            
-            <div className="px-4 pt-4">
-              <Button 
-                onClick={handleInscriptionClick}
-                className="w-full bg-white text-brand-black px-6 py-3 font-black text-sm transform -skew-x-3 hover:skew-x-0 hover:scale-105 hover:bg-brand-black hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-brand-black"
-              >
-                ¡INSCRÍBETE!
-              </Button>
-            </div>
-          </div>
-        )}
+        {/* Menú móvil retirado */}
       </nav>
     </header>
     </>

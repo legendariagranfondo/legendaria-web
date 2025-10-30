@@ -23,36 +23,81 @@ export default function SponsorsSection() {
           const root = sectionRef.current!
           
           const ctx = gsap.context(() => {
-            const tl = gsap.timeline({
-              scrollTrigger: {
-                trigger: root,
-                start: "top bottom",
-                end: "center center",
-                scrub: 1,
-              },
-            });
-            sectionTimeline = tl
+            // Contenedor completo (aparece antes y sin scrub)
+            gsap.fromTo(
+              root,
+              { opacity: 0, y: 24 },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+                ease: "power2.out",
+                scrollTrigger: {
+                  trigger: root,
+                  start: "top 88%",
+                  once: true,
+                },
+              }
+            )
 
-            // Title animation
+            // Título
             const title = root.querySelector(".sponsors-title");
             if (title) {
-              tl.fromTo(
+              gsap.fromTo(
                 title,
-                { opacity: 0, y: 80, filter: "blur(10px)" },
-                { opacity: 1, y: 0, filter: "blur(0px)", ease: "none" },
-                0.2
-              );
+                { opacity: 0, y: 20 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.45,
+                  ease: "power2.out",
+                  scrollTrigger: {
+                    trigger: root,
+                    start: "top 90%",
+                    once: true,
+                  },
+                }
+              )
             }
 
-            // Content animation
+            // Subtítulo
+            const subtitle = root.querySelector(".sponsors-subtitle");
+            if (subtitle) {
+              gsap.fromTo(
+                subtitle,
+                { opacity: 0, y: 18 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.4,
+                  ease: "power2.out",
+                  scrollTrigger: {
+                    trigger: root,
+                    start: "top 88%",
+                    once: true,
+                  },
+                }
+              )
+            }
+
+            // Contenido (bloque de patrocinio)
             const content = root.querySelector(".sponsors-content");
             if (content) {
-              tl.fromTo(
+              gsap.fromTo(
                 content,
-                { opacity: 0, y: 60 },
-                { opacity: 1, y: 0, ease: "none" },
-                0.4
-              );
+                { opacity: 0, y: 24 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.45,
+                  ease: "power2.out",
+                  scrollTrigger: {
+                    trigger: root,
+                    start: "top 85%",
+                    once: true,
+                  },
+                }
+              )
             }
           }, sectionRef)
 
@@ -91,7 +136,7 @@ export default function SponsorsSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 lg:py-32 bg-gradient-to-br from-brand-black to-slate-900 text-white relative overflow-hidden"
+      className="py-20 lg:py-32 bg-gradient-to-br from-brand-black to-slate-900 text-white relative overflow-hidden overflow-x-clip"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
@@ -103,55 +148,33 @@ export default function SponsorsSection() {
         <div className="max-w-4xl mx-auto text-center">
           {/* Title */}
           <div className="mb-12">
-            <h2 className="sponsors-title text-4xl sm:text-5xl lg:text-6xl font-clash font-black text-white mb-6">
+            <h2 className="sponsors-title text-4xl sm:text-5xl lg:text-6xl font-clash font-black text-white mb-4">
               Gracias a nuestros{" "}
               <span className="text-brand-gold">patrocinadores</span>
             </h2>
-            <p className="text-xl text-slate-300">
+            <p className="sponsors-subtitle text-xl text-slate-300">
               Empresas que hacen posible La Legendaria
             </p>
           </div>
 
           {/* Content */}
           <div className="sponsors-content">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-white/10">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <Heart className="w-8 h-8 text-brand-gold" />
-                <h3 className="text-2xl font-bold text-white">Patrocinadores 2025</h3>
-              </div>
-              
-              {/* Placeholder for sponsor logos */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60">
-                <div className="w-24 h-16 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-sm font-bold">Logo 1</span>
-                </div>
-                <div className="w-24 h-16 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-sm font-bold">Logo 2</span>
-                </div>
-                <div className="w-24 h-16 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-sm font-bold">Logo 3</span>
-                </div>
-                <div className="w-24 h-16 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-sm font-bold">Logo 4</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Call to Action for Sponsors */}
-            <div className="bg-brand-gold/10 backdrop-blur-sm rounded-2xl p-8 border border-brand-gold/20">
+            {/* Información para patrocinadores */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <Handshake className="w-8 h-8 text-brand-gold" />
                 <h3 className="text-2xl font-bold text-white">¿Quieres ser patrocinador?</h3>
               </div>
               <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-                ¿Quieres que tu marca esté con nosotros en 2025? Consulta nuestras opciones de patrocinio y forma parte de La Legendaria.
+                Si tu marca quiere formar parte de La Legendaria 2026, escríbenos y te enviaremos el dossier de patrocinio con opciones y visibilidad del evento.
               </p>
               <Button 
                 size="lg"
                 className="bg-brand-gold hover:bg-brand-gold/90 text-brand-black px-8 py-4 text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
+                onClick={() => window.open('mailto:legendariagranfondo@gmail.com?subject=Patrocinio%20Legendaria%202026', '_self')}
               >
                 <Star className="w-5 h-5 mr-2" />
-                Consultar patrocinio
+                Solicitar dossier de patrocinio
               </Button>
             </div>
           </div>

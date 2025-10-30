@@ -9,8 +9,6 @@ export default function EventBenefits() {
 
   useEffect(() => {
     let cleanup: (() => void) | null = null
-    let createdEventListeners: Array<{ target: Window | Element, type: string, handler: EventListenerOrEventListenerObject }> = []
-    let sectionTimeline: any | null = null
     
     const loadGSAP = async () => {
       try {
@@ -23,62 +21,64 @@ export default function EventBenefits() {
           const root = sectionRef.current!
           
           const ctx = gsap.context(() => {
-            const tl = gsap.timeline({
-              scrollTrigger: {
-                trigger: root,
-                start: "top bottom",
-                end: "center center",
-                scrub: 1,
-              },
-            });
-            sectionTimeline = tl
+            // Sección completa: aparece pronto y una sola vez
+            gsap.fromTo(
+              root,
+              { opacity: 0, y: 24 },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+                ease: "power2.out",
+                scrollTrigger: {
+                  trigger: root,
+                  start: "top 90%",
+                  once: true,
+                },
+              }
+            )
 
-            // Title animation
+            // Título
             const title = root.querySelector(".benefits-title");
             if (title) {
-              tl.fromTo(
+              gsap.fromTo(
                 title,
-                { opacity: 0, y: 80, filter: "blur(10px)" },
-                { opacity: 1, y: 0, filter: "blur(0px)", ease: "none" },
-                0.2
-              );
+                { opacity: 0, y: 18 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.45,
+                  ease: "power2.out",
+                  scrollTrigger: {
+                    trigger: root,
+                    start: "top 92%",
+                    once: true,
+                  },
+                }
+              )
             }
 
-            // Benefits cards animation
+            // Tarjetas (stagger)
             const cards = root.querySelectorAll(".benefit-card");
-            cards.forEach((card, index) => {
-              tl.fromTo(
-                card,
-                { opacity: 0, y: 60, scale: 0.9 },
-                { opacity: 1, y: 0, scale: 1, ease: "none" },
-                0.4 + index * 0.1
-              );
-            });
+            gsap.fromTo(
+              cards,
+              { opacity: 0, y: 20 },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.4,
+                ease: "power2.out",
+                stagger: 0.08,
+                scrollTrigger: {
+                  trigger: root,
+                  start: "top 88%",
+                  once: true,
+                },
+              }
+            )
           }, sectionRef)
 
           cleanup = () => {
-            try {
-              createdEventListeners.forEach(({ target, type, handler }) => {
-                target.removeEventListener(type, handler as any)
-              })
-            } catch {}
-            ;(async () => {
-              try {
-                const { ScrollTrigger } = await import("gsap/ScrollTrigger")
-                if (sectionTimeline && typeof sectionTimeline.kill === 'function') {
-                  sectionTimeline.kill()
-                }
-                const currentRoot = sectionRef.current
-                if (currentRoot) {
-                  ScrollTrigger.getAll().forEach(t => {
-                    const trig = (t as any).vars?.trigger as Element | undefined
-                    if (trig && currentRoot.contains(trig)) {
-                      t.kill()
-                    }
-                  })
-                }
-              } catch {}
-            })()
             try { ctx.revert() } catch {}
           }
         }
@@ -88,31 +88,25 @@ export default function EventBenefits() {
     };
 
     loadGSAP();
-    return () => {
-      if (cleanup) cleanup()
-    }
+    return () => { if (cleanup) cleanup() }
   }, []);
 
+  // 3 bloques para una rejilla equilibrada en desktop
   const benefits = [
     {
       icon: Mountain,
-      title: "Recorrido inolvidable",
-      description: "Entre montaña, viñedos y valle."
+      title: "Tres recorridos oficiales",
+      description: "134,1 · 152,3 · 170,5 km: elige tu desafío con garantías."
     },
     {
       icon: Shield,
-      title: "Ambiente profesional",
-      description: "Con apoyo local, cronometrado y seguro."
-    },
-    {
-      icon: Users,
-      title: "Zona Expo",
-      description: "Stands de marcas top, animación y comunidad ciclista."
+      title: "Seguridad y soporte",
+      description: "Cronometraje, asistencia mecánica y sanitaria durante la marcha."
     },
     {
       icon: Trophy,
-      title: "Para todos los niveles",
-      description: "Amateur, entusiasta o competidor."
+      title: "Medallas y bolsa",
+      description: "Medallas por tiempo y bolsa del participante con maillot oficial."
     }
   ];
 
@@ -135,28 +129,28 @@ export default function EventBenefits() {
               ¿Por qué elegir{" "}
               <span className="text-brand-gold">La Legendaria</span>?
             </h2>
-            <p className="text-xl text-cement-600 max-w-3xl mx-auto">
-              Una experiencia ciclista completa que va más allá de la competición
+            <p className="text-xl text-cement-700 max-w-3xl mx-auto">
+              Una marcha diseñada para una experiencia segura, completa y exigente
             </p>
           </div>
 
           {/* Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
                 <div
                   key={index}
-                  className="benefit-card group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-cement-200 hover:border-brand-gold/30"
+                  className="benefit-card group bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-cement-200 hover:border-cement-300 hover:-translate-y-0.5"
                 >
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-gold/20 transition-colors duration-300">
-                      <IconComponent className="w-8 h-8 text-brand-gold" />
+                    <div className="w-14 h-14 bg-white border border-cement-200 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <IconComponent className="w-7 h-7 text-brand-black" />
                     </div>
-                    <h3 className="text-xl font-bold text-brand-black mb-4">
+                    <h3 className="text-xl font-bold text-brand-black mb-3">
                       {benefit.title}
                     </h3>
-                    <p className="text-cement-600 leading-relaxed">
+                    <p className="text-cement-700 leading-relaxed">
                       {benefit.description}
                     </p>
                   </div>
@@ -165,23 +159,11 @@ export default function EventBenefits() {
             })}
           </div>
 
-          {/* Additional Info */}
-          <div className="mt-16 text-center">
-            <div className="inline-flex items-center gap-8 bg-brand-black/5 rounded-2xl p-8 mb-8">
-              <div className="flex items-center gap-3">
-                <MapPin className="w-6 h-6 text-brand-gold" />
-                <span className="font-semibold text-brand-black">Ontinyent</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Clock className="w-6 h-6 text-brand-gold" />
-                <span className="font-semibold text-brand-black">9 Mayo 2026</span>
-              </div>
-            </div>
-            
-            {/* CTA Button */}
+          {/* CTA Button */}
+          <div className="mt-14 text-center">
             <button 
-              className="bg-brand-gold hover:bg-brand-gold/90 text-brand-black px-8 py-4 text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-              onClick={() => window.open('https://web.rockthesport.com/es', '_blank', 'noopener,noreferrer')}
+              className="bg-brand-gold hover:bg-brand-gold/90 text-brand-black px-8 py-4 text-lg font-bold transition-all duration-300 shadow-md hover:shadow-lg"
+              onClick={() => window.open('https://www.rockthesport.com/es/evento/legendaria-ontinyent-gran-fondo', '_blank', 'noopener,noreferrer')}
             >
               ¡INSCRÍBETE AHORA!
             </button>

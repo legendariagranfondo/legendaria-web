@@ -6,7 +6,6 @@ import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import SkipLinks from "@/components/ui/SkipLinks"
 import GSAPRouteGuard from "@/components/animations/GSAPRouteGuard"
-import WhatsAppButton from "@/components/ui/WhatsAppButton"
 import CookieConsentPremium from "@/components/ui/CookieConsent"
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics"
 import { Analytics } from "@vercel/analytics/react"
@@ -154,14 +153,7 @@ export default async function LocaleLayout({
           <Footer />
           <GSAPRouteGuard />
           <GoogleAnalytics />
-          <WhatsAppButton 
-            phoneNumber="+34644465873"
-            variant="floating"
-            size="md"
-            showTooltip={true}
-            tooltipText="WhatsApp"
-            pageContext="home"
-          />
+          {/* WhatsApp flotante retirado temporalmente */}
           <CookieConsentPremium />
           <Analytics />
           <SpeedInsights />

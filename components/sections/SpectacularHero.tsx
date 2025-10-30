@@ -5,7 +5,6 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import PremiumButton from "@/components/ui/PremiumButton"
 import { Play, ArrowRight, Sparkles, MapPin, Award, ThumbsUp, Target } from "lucide-react"
-import { generateWhatsAppUrl, getContextualMessage, trackWhatsAppEvent } from "@/lib/whatsapp-config"
 import { useTranslations } from "@/hooks/use-translations"
 
 export default function SpectacularHero() {
@@ -30,7 +29,7 @@ export default function SpectacularHero() {
 
   // Función para manejar click de inscripción
   const handleInscriptionClick = () => {
-    window.open('https://web.rockthesport.com/es', '_blank', 'noopener,noreferrer')
+    window.open('https://www.rockthesport.com/es/evento/legendaria-ontinyent-gran-fondo', '_blank', 'noopener,noreferrer')
   }
 
   useEffect(() => {
@@ -81,19 +80,9 @@ export default function SpectacularHero() {
             // 🚀 HERO LEVEL MUNDIAL - TÉCNICAS APPLE/STRIPE/VERCEL
             masterTL = gsap.timeline({ delay: 0.5 })
 
-            // 1. BACKGROUND PARALLAX PREMIUM
-            const tween = gsap.to(bgElement, {
-              yPercent: 30,
-              ease: "none",
-              scrollTrigger: {
-                trigger: root,
-                start: "top top",
-                end: "bottom top",
-                scrub: 0.5
-              }
-            })
+            // Background parallax desactivado para una experiencia más estable en el primer scroll
             // @ts-expect-error gsap types
-            bgScrollTrigger = tween.scrollTrigger || null
+            bgScrollTrigger = null
 
             // 2. TITLE - WORLD-CLASS REVEAL
             const titleLines = titleElement.querySelectorAll('.title-line')
@@ -303,7 +292,7 @@ export default function SpectacularHero() {
             {/* SUBHEADLINE - Con keyword Valencia */}
             <div className="max-w-4xl mx-auto mb-12 lg:mb-16">
               <p className="hero-subtitle text-lg sm:text-xl lg:text-2xl text-white/90 font-light leading-relaxed tracking-wide text-center parallax-light" style={{ opacity: isLoaded ? 1 : 0.8 }}>
-                La gran marcha ciclista de la Vall d'Albaida
+                Tu próximo gran desafío
               </p>
               <p className="text-base sm:text-lg text-white/80 font-medium mt-4">
                 Domingo • 9 de Mayo 2026 • Salida desde Ontinyent
@@ -319,13 +308,6 @@ export default function SpectacularHero() {
                 type="button"
               >
                 Inscríbete ahora
-              </button>
-              <button 
-                className="hero-cta bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-black px-8 py-4 lg:px-12 lg:py-5 text-lg lg:text-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50 focus:ring-offset-2"
-                aria-label="Ver recorrido de La Legendaria"
-                type="button"
-              >
-                Ver recorrido
               </button>
             </div>
 

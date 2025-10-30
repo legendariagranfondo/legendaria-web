@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { useRef, useEffect } from "react";
-import { Calendar, MapPin, Route, Wrench, Clock, Users } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function EventInfo() {
@@ -23,37 +23,44 @@ export default function EventInfo() {
           const root = sectionRef.current!
           
           const ctx = gsap.context(() => {
-            const tl = gsap.timeline({
-              scrollTrigger: {
-                trigger: root,
-                start: "top bottom",
-                end: "center center",
-                scrub: 1,
-              },
-            });
-            sectionTimeline = tl
-
-            // Title animation
+            // Title animation (rápida y sin scrub)
             const title = root.querySelector(".info-title");
             if (title) {
-              tl.fromTo(
+              gsap.fromTo(
                 title,
-                { opacity: 0, y: 80, filter: "blur(10px)" },
-                { opacity: 1, y: 0, filter: "blur(0px)", ease: "none" },
-                0.2
+                { opacity: 0, y: 30 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.5,
+                  ease: "power2.out",
+                  scrollTrigger: {
+                    trigger: root,
+                    start: "top 85%",
+                    once: true,
+                  },
+                }
               );
             }
 
-            // Info cards animation
+            // Cards animation (stagger temprano)
             const cards = root.querySelectorAll(".info-card");
-            cards.forEach((card, index) => {
-              tl.fromTo(
-                card,
-                { opacity: 0, y: 60, scale: 0.9 },
-                { opacity: 1, y: 0, scale: 1, ease: "none" },
-                0.4 + index * 0.1
-              );
-            });
+            gsap.fromTo(
+              cards,
+              { opacity: 0, y: 24 },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.45,
+                ease: "power2.out",
+                stagger: 0.08,
+                scrollTrigger: {
+                  trigger: root,
+                  start: "top 80%",
+                  once: true,
+                },
+              }
+            );
           }, sectionRef)
 
           cleanup = () => {
@@ -91,27 +98,18 @@ export default function EventInfo() {
   const eventDetails = [
     {
       icon: Calendar,
-      title: "Fecha",
-      content: "Domingo, 9 de mayo 2026",
-      color: "text-blue-600"
+      title: "Fecha del evento",
+      content: "Sábado, 9 de mayo de 2026 · Salida 07:30",
+    },
+    {
+      icon: Calendar,
+      title: "Inscripciones",
+      content: "Desde el 15/11/2025",
     },
     {
       icon: MapPin,
-      title: "Lugar",
-      content: "Salida y meta: Polideportivo Municipal de Ontinyent (césped artificial)",
-      color: "text-green-600"
-    },
-    {
-      icon: Route,
-      title: "Distancias",
-      content: "105 km y 55 km",
-      color: "text-purple-600"
-    },
-    {
-      icon: Wrench,
-      title: "Servicios",
-      content: "Avituallamientos, cronometraje, duchas, asistencia técnica",
-      color: "text-orange-600"
+      title: "Salida y meta",
+      content: "Polideportivo Municipal d’Ontinyent",
     }
   ];
 
@@ -139,23 +137,23 @@ export default function EventInfo() {
           </div>
 
           {/* Event Details Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12">
             {eventDetails.map((detail, index) => {
               const IconComponent = detail.icon;
               return (
                 <div
                   key={index}
-                  className="info-card bg-gradient-to-br from-white to-slate-50 rounded-2xl p-8 shadow-lg border border-cement-200 hover:shadow-xl transition-all duration-300"
+                  className="info-card bg-white rounded-xl p-6 md:p-7 shadow-sm hover:shadow-md border border-cement-200 hover:border-cement-300 transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className={`w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center flex-shrink-0`}>
-                      <IconComponent className={`w-6 h-6 ${detail.color}`} />
+                    <div className="w-10 h-10 bg-white border border-cement-200 rounded-full flex items-center justify-center flex-shrink-0">
+                      <IconComponent className="w-5 h-5 text-brand-black/80" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-brand-black mb-2">
+                      <h3 className="text-lg md:text-xl font-bold text-brand-black mb-1.5">
                         {detail.title}
                       </h3>
-                      <p className="text-cement-600 leading-relaxed">
+                      <p className="text-cement-700 leading-relaxed text-sm md:text-base">
                         {detail.content}
                       </p>
                     </div>
@@ -169,15 +167,8 @@ export default function EventInfo() {
           <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg"
-              className="bg-brand-gold hover:bg-brand-gold/90 text-brand-black px-8 py-4 text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              <MapPin className="w-5 h-5 mr-2" />
-              Ver mapa del recorrido
-            </Button>
-            <Button 
-              size="lg"
               className="bg-brand-black hover:bg-brand-black/90 text-white px-8 py-4 text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
-              onClick={() => window.open('https://web.rockthesport.com/es', '_blank', 'noopener,noreferrer')}
+              onClick={() => window.open('https://www.rockthesport.com/es/evento/legendaria-ontinyent-gran-fondo', '_blank', 'noopener,noreferrer')}
             >
               ¡INSCRÍBETE YA!
             </Button>

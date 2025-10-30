@@ -322,10 +322,8 @@ export default function AcademyHeritage() {
           <div className="text-center mb-6 lg:mb-8">
             {/* Main Title - World-Class Staggered Animation */}
             <h2 className="academy-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-clash font-black text-brand-black mb-4 lg:mb-6 leading-tight tracking-tight">
-              <div className="title-la">Únete a</div>
-              <div className="title-number text-brand-gold">La Legendaria</div>
-              <div className="title-academia">una experiencia ciclista</div>
-              <div className="title-location text-brand-gold">ÚNICA</div>
+              <div className="title-la">NACE UNA</div>
+              <div className="title-number text-brand-gold">LEYENDA</div>
             </h2>
 
             {/* Subtitle - Wave Animation */}
@@ -340,10 +338,7 @@ export default function AcademyHeritage() {
           {/* Description Section - Typing Effect */}
           <div className="max-w-4xl mx-auto text-center mb-6 lg:mb-8">
             <p className="academy-description text-lg sm:text-xl lg:text-2xl text-cement-700 leading-relaxed font-light">
-              Únete a La Legendaria, una experiencia ciclista única que combina paisaje, comunidad y deporte. Desde el Club Ciclista Ontinyent te invitamos a pedalear por rutas espectaculares y ser parte de un evento que va más allá de la competición.
-            </p>
-            <p className="academy-description text-lg sm:text-xl lg:text-2xl text-cement-700 leading-relaxed font-light mt-4">
-              Con dos recorridos – 105 km y 55 km – adaptados para todos los niveles, encontrarás tu reto ideal.
+              Bienvenidos a LEGENDARIA ONTINYENT GRAN FONDO, una marcha ciclista creada para quienes no buscan solo llegar, sino escribir su propia leyenda sobre el asfalto de Ontinyent y la “pequeña Toscana valenciana”.
             </p>
           </div>
 

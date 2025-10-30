@@ -15,7 +15,7 @@ export default function CallToActionPremium() {
 
   // Función para abrir inscripción
   const openInscription = () => {
-    window.open('https://web.rockthesport.com/es', '_blank', 'noopener,noreferrer')
+    window.open('https://www.rockthesport.com/es/evento/legendaria-ontinyent-gran-fondo', '_blank', 'noopener,noreferrer')
   }
 
   useEffect(() => {

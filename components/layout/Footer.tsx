@@ -103,13 +103,13 @@ export default function Footer() {
                 <div className="w-8 h-8 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
-                <a href="tel:+346XXXXXXX" className="footer-link text-cement-600 hover:text-brand-gold font-medium transition-colors leading-relaxed">+34 6 XX XX XX XX</a>
+                <a href="tel:+34672295578" className="footer-link text-cement-600 hover:text-brand-gold font-medium transition-colors leading-relaxed">+34 672 29 55 78</a>
               </div>
               <div className="flex items-start space-x-3 group">
                 <div className="w-8 h-8 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
-                <a href="mailto:info@legendariana.com" className="footer-link text-cement-600 hover:text-brand-gold font-medium transition-colors leading-relaxed">info@legendariana.com</a>
+                <a href="mailto:legendariagranfondo@gmail.com" className="footer-link text-cement-600 hover:text-brand-gold font-medium transition-colors leading-relaxed">legendariagranfondo@gmail.com</a>
               </div>
               <div className="flex items-start space-x-3 group">
                 <div className="w-8 h-8 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
