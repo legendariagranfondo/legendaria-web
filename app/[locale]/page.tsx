@@ -13,10 +13,10 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "La Legendaria - Ontinyent Grand Fondo 2026",
   description:
-    "La gran marcha ciclista de la Vall d'Albaida. Únete a La Legendaria, una experiencia ciclista única que combina paisaje, comunidad y deporte. 105 km y 55 km adaptados para todos los niveles. Domingo 9 de mayo 2026.",
+    "La gran marcha ciclista de Ontinyent (Interior de Valencia y Alicante). Únete a La Legendaria, una experiencia ciclista única que combina paisaje, comunidad y deporte. Dos recorridos oficiales adaptados para todos los niveles. Sábado 9 de mayo 2026.",
   openGraph: {
     title: "La Legendaria - Ontinyent Grand Fondo 2026",
-    description: "La gran marcha ciclista de la Vall d'Albaida. Una experiencia ciclista única que combina paisaje, comunidad y deporte. Domingo 9 de mayo 2026.",
+    description: "La gran marcha ciclista de Ontinyent (Interior de Valencia y Alicante). Una experiencia ciclista única que combina paisaje, comunidad y deporte. Sábado 9 de mayo 2026.",
   },
 }
 

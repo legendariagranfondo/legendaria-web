@@ -284,7 +284,7 @@ export default function SpectacularHero() {
                 La Legendaria
               </div>
               <div className="title-line relative block">
-                <span className="gold-text-gradient">Ontinyent Grand Fondo</span>
+                <span className="gold-text-gradient">ONTINYENT GRAN FONDO</span>
                 <div className="absolute inset-0 bg-brand-gold/20 blur-3xl -z-10 floating-element" />
               </div>
             </h1>
@@ -295,7 +295,7 @@ export default function SpectacularHero() {
                 Tu próximo gran desafío
               </p>
               <p className="text-base sm:text-lg text-white/80 font-medium mt-4">
-                Domingo • 9 de Mayo 2026 • Salida desde Ontinyent
+                SABADO 9 MAYO
               </p>
             </div>
 

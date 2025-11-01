@@ -95,8 +95,8 @@ export default function EventBenefits() {
   const benefits = [
     {
       icon: Mountain,
-      title: "Tres recorridos oficiales",
-      description: "134,1 · 152,3 · 170,5 km: elige tu desafío con garantías."
+      title: "Dos recorridos oficiales",
+      description: "Elige tu desafío con garantías."
     },
     {
       icon: Shield,
@@ -106,7 +106,7 @@ export default function EventBenefits() {
     {
       icon: Trophy,
       title: "Medallas y bolsa",
-      description: "Medallas por tiempo y bolsa del participante con maillot oficial."
+      description: "Medalla finisher y medalla Legendaria. Bolsa del participante con maillot oficial."
     }
   ];
 

@@ -330,7 +330,7 @@ export default function AcademyHeritage() {
             <div className="mb-4 lg:mb-6">
               <div className="academy-subtitle inline-flex items-center px-6 py-3 bg-brand-black/10 border border-brand-black/20 text-brand-black font-bold transform skew-x-3">
                 <MapPin className="w-5 h-5 mr-3" />
-                Vall d'Albaida • Ontinyent • 9 Mayo 2026
+                Sábado 9 Mayo 2026 • Ontinyent (Interior de Valencia y Alicante)
               </div>
             </div>
           </div>
@@ -338,7 +338,7 @@ export default function AcademyHeritage() {
           {/* Description Section - Typing Effect */}
           <div className="max-w-4xl mx-auto text-center mb-6 lg:mb-8">
             <p className="academy-description text-lg sm:text-xl lg:text-2xl text-cement-700 leading-relaxed font-light">
-              Bienvenidos a LEGENDARIA ONTINYENT GRAN FONDO, una marcha ciclista creada para quienes no buscan solo llegar, sino escribir su propia leyenda sobre el asfalto de Ontinyent y la “pequeña Toscana valenciana”.
+              Bienvenidos a LEGENDARIA ONTINYENT GRAN FONDO, una marcha ciclista creada para quienes no buscan solo llegar, sino escribir su propia leyenda sobre el asfalto de Ontinyent, en el interior de Valencia y Alicante.
             </p>
           </div>
 

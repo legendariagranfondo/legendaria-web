@@ -71,19 +71,19 @@ export default function Footer() {
               <li>
                 <span className="footer-link text-cement-600 font-medium flex items-center gap-3 group">
                   <div className="w-2 h-2 bg-brand-gold transform rotate-45 group-hover:scale-125 transition-transform"></div>
-                  105 km y 55 km
+                  Dos recorridos oficiales
                 </span>
               </li>
               <li>
                 <span className="footer-link text-cement-600 font-medium flex items-center gap-3 group">
                   <div className="w-2 h-2 bg-brand-gold transform rotate-45 group-hover:scale-125 transition-transform"></div>
-                  9 Mayo 2026
+                  Sábado 9 Mayo 2026
                 </span>
               </li>
               <li>
                 <span className="footer-link text-cement-600 font-medium flex items-center gap-3 group">
                   <div className="w-2 h-2 bg-brand-gold transform rotate-45 group-hover:scale-125 transition-transform"></div>
-                  Ontinyent, Valencia
+                  Ontinyent (Interior de Valencia y Alicante)
                 </span>
               </li>
               <li>
@@ -103,7 +103,7 @@ export default function Footer() {
                 <div className="w-8 h-8 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
-                <a href="tel:+34672295578" className="footer-link text-cement-600 hover:text-brand-gold font-medium transition-colors leading-relaxed">+34 672 29 55 78</a>
+                <a href="tel:+34692615736" className="footer-link text-cement-600 hover:text-brand-gold font-medium transition-colors leading-relaxed">+34 692 61 57 36</a>
               </div>
               <div className="flex items-start space-x-3 group">
                 <div className="w-8 h-8 text-brand-gold flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
